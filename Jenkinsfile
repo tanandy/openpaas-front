@@ -12,7 +12,7 @@ pipeline {
       }
       steps {
         script {
-          def dockerImage = docker.build 'linagora/openpaas-front'
+          def dockerImage = docker.build('linagora/openpaas-front', '--no-cache .')
           docker.withRegistry('', 'dockerHub') {
             dockerImage.push('branch-main')
           }
