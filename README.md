@@ -103,7 +103,7 @@ Build frontends on the main branch and contact frontend on a custom branch `hant
 
 ```sh
 # Using BuildKit
-DOCKER_BUILDKIT=1 docker build --pull -f Dockerfile.dev --build-arg CONTACTS_GIT_BRANCH=hantt12-patch-1 -t openpaas-front-dev . --no-cache
+DOCKER_BUILDKIT=1 docker build --pull -f Dockerfile.dev --build-arg CONTACTS_GIT_TREEISH=hantt12-patch-1 -t openpaas-front-dev . --no-cache
 ```
 
 Build all frontends and overrides nginx version to `1.18.0`
