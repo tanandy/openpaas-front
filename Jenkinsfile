@@ -3,7 +3,6 @@ pipeline {
 
   stages {
     stage('Deliver Docker images') {
-      when { branch 'main' }
       agent {
         docker {
           image 'docker:19.03.12-dind'
